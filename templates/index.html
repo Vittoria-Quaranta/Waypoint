@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Waypoint</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Waypoint</h1>
+    <p>Your personal planning system.</p>
+
+</header>
+
+<main>
+
+    <section class="calendar-card">
+
+    <div class="calendar-header">
+
+        <button id="prev-month">&lt;</button>
+
+        <h2 id="month-year"></h2>
+
+        <button id="next-month">&gt;</button>
+
+    </div>
+
+
+    <div class="weekdays">
+
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+
+    </div>
+
+
+    <div id="calendar-grid"></div>
+
+</section>
+
+
+<!-- Event popup -->
+
+<div id="event-modal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <h2 id="modal-title">Add Event</h2>
+
+        <p id="selected-date"></p>
+
+        <input id="event-title-input"
+               placeholder="Event name">
+
+
+        <button id="save-event">
+            Save
+        </button>
+
+
+        <button id="delete-event">
+            Delete
+        </button>
+
+
+        <button id="close-modal">
+            Cancel
+        </button>
+
+    </div>
+
+</div>
+
+</main>
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>

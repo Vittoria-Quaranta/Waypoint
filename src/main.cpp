@@ -1,15 +1,25 @@
-#include "crow.h"
+#include "server.h"
+
+#include <iostream>
+
 
 int main()
 {
-    crow::SimpleApp app;
+    try
+    {
+        startServer();
+    }
 
-    CROW_ROUTE(app, "/")
-    ([](){
-        return "Hello from C++ on Mac!";
-    });
+    catch(const std::exception& e)
+    {
+        std::cerr
+            << "Waypoint failed to start: "
+            << e.what()
+            << std::endl;
 
-    app.port(8080)
-       .multithreaded()
-       .run();
+        return 1;
+    }
+
+
+    return 0;
 }
